@@ -2,5 +2,7 @@
 	email = petyokostakov@gmail.com
 	name = petyokostakov
 
-[github]
-    user = petyokostakov
+[alias]
+    pr = pull --rebase
+    p = push
+    s = status

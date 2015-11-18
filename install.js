@@ -9,8 +9,8 @@ var exec = require('child_process').exec,
 
 //TODO loop all files
 // Create replacing files from "home" folder with links from dotfiles1
-exec('ln -sfv "git/dotfiles1/.gitconfig" ~', execPrint);
-exec('ln -sfv "git/dotfiles1/.bashrc" ~', execPrint);
+exec('ln -sfv "' + __dirname + '/.gitconfig" ~', execPrint);
+exec('ln -sfv "' + __dirname + '/.bashrc" ~', execPrint);
 
 // EXAMPLE: sudo apt-get update&&sudo apt-get install foo bar baz foo-dev foo-dbg
 exec('sudo add-apt-repository ppa:webupd8team/java', execPrint);
