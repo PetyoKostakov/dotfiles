@@ -1,0 +1,36 @@
+#!/bin/bash
+
+DIR_NAME=`pwd`
+echoc () {
+    color=`tput setaf ${2}`
+    res=`tput sgr0`
+    echo "${color}${1}${res}"
+}
+
+########################################################################################################################
+
+echoc "Add apt-get repos..." 3
+add-apt-repository ppa:webupd8team/java
+
+echoc "Update apt-get..." 3
+apt-get update
+
+echoc "Installing packages..." 3
+PACKAGES=( git-core git-gui gitk meld oracle-java8-installer vim )
+for p in  "${PACKAGES[@]}"
+do
+    echoc "Installing package ${p}..." 6
+    apt-get install ${p}
+done
+
+########################################################################################################################
+
+echoc "Create symlinks" 3
+SYM_FILES="$DIR_NAME/symlinks/"
+for f in  $SYM_FILES/.*
+do
+  echoc "Creating symlinks for $f file..." 6
+  ln -sfv "$f" ~
+done
+
+#ECHO COLOR http://stackoverflow.com/questions/5947742/how-to-change-the-output-color-of-echo-in-linux

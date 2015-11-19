@@ -1,14 +1,12 @@
 # dotfiles
-My personal dotfiles and custom installation with nodejs.  
+My personal dotfiles and custom installation with bash script.
 
-# UNDER CONSTRUCTION NOT TESTED
+# UNDER CONSTRUCTION TESTED ONLY ON UBUNTU
 
 # Installation
 
-Install nodejs and run this in dotfiles dir:
+Run install file:
 
 ```
-$ node install.js
+$ sudo bash install
 ```
-
-*be aware that password may be prompted from time to time*
