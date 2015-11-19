@@ -1,8 +1,0 @@
-[user]
-	email = petyokostakov@gmail.com
-	name = petyokostakov
-
-[alias]
-    pr = pull --rebase
-    p = push
-    s = status
